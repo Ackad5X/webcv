@@ -1,13 +1,13 @@
-import zscaler from "@/assets/zscaler.png.asset.json";
-import netskope from "@/assets/netskope.png.asset.json";
-import forcepoint from "@/assets/forcepoint.png.asset.json";
-import paloalto from "@/assets/palo-alto-networks.png.asset.json";
+import zscaler from "@/assets/zscaler.png";
+import netskope from "@/assets/netskope.png";
+import forcepoint from "@/assets/forcepoint.png";
+import paloalto from "@/assets/palo-alto-networks.png";
 
 const logos: Record<string, string> = {
-  "zscaler.com": zscaler.url,
-  "netskope.com": netskope.url,
-  "forcepoint.com": forcepoint.url,
-  "paloaltonetworks.com": paloalto.url,
+  "zscaler.com": zscaler,
+  "netskope.com": netskope,
+  "forcepoint.com": forcepoint,
+  "paloaltonetworks.com": paloalto,
 };
 
 type Props = {
