@@ -20,6 +20,9 @@ dist-ssr
 .wrangler/
 .dev.vars
 
+# Private career notes / third-party IP — never publish
+work_history/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

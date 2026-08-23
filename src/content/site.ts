@@ -30,28 +30,24 @@ export const vendors = [
 export const ui = {
   nav: {
     work: { en: "Project experience", es: "Experiencia" } as L,
-    all: { en: "All projects", es: "Proyectos" } as L,
     certs: { en: "Certifications", es: "Certificaciones" } as L,
+    automation: { en: "Automation", es: "Automatización" } as L,
     interests: { en: "Interests", es: "Intereses" } as L,
     contact: { en: "Contact", es: "Contacto" } as L,
   },
   sections: {
     featured: { en: "Project experience", es: "Experiencia en proyectos" } as L,
-    all: { en: "Full engagement history", es: "Histórico de proyectos" } as L,
-    allNote: {
-      en: "Additional delivery across regulated and private-sector environments.",
-      es: "Proyectos adicionales en entornos regulados y del sector privado.",
-    } as L,
     certs: { en: "Certifications", es: "Certificaciones" } as L,
     certsNote: {
-      en: "15 vendor certifications across the SSE/SASE stack.",
-      es: "15 certificaciones de fabricante en el stack SSE/SASE.",
+      en: "19 vendor certifications across the SSE/SASE stack.",
+      es: "19 certificaciones de fabricante en el stack SSE/SASE.",
+    } as L,
+    automation: { en: "AI & Automation", es: "IA y Automatización" } as L,
+    automationNote: {
+      en: "With the rise of AI, automation has become far more accessible — I've leaned into that, building internal tooling (often with AI-assisted development) around the areas below.",
+      es: "Con el auge de la IA, la automatización se ha vuelto mucho más accesible — he apostado por ello, construyendo herramientas internas (muchas veces con desarrollo asistido por IA) en las áreas de abajo.",
     } as L,
     interests: { en: "Interests", es: "Intereses" } as L,
-    interestsNote: {
-      en: "What I keep coming back to when the tickets are closed.",
-      es: "A lo que vuelvo cuando los tickets están cerrados.",
-    } as L,
   },
   labels: {
     sector: { en: "Sector", es: "Sector" } as L,
@@ -65,7 +61,19 @@ export const ui = {
     close: { en: "Close", es: "Cerrar" } as L,
     issued: { en: "Issued", es: "Emitida" } as L,
     downloadCv: { en: "Download CV", es: "Descargar CV" } as L,
-    email: { en: "Email", es: "Email" } as L,
+    interestsTechnical: { en: "Technical", es: "Técnicos" } as L,
+    interestsPersonal: { en: "Personal", es: "Personales" } as L,
+    moreEngagements: {
+      en: "Additional delivery across regulated and private-sector environments.",
+      es: "Proyectos adicionales en entornos regulados y del sector privado.",
+    } as L,
+  },
+  stats: {
+    experienceValue: { en: "4+", es: "4+" } as L,
+    experienceLabel: { en: "Years in SASE/SSE", es: "Años en SASE/SSE" } as L,
+    sectorsLabel: { en: "Sectors delivered", es: "Sectores" } as L,
+    engagementsLabel: { en: "Engagements", es: "Proyectos" } as L,
+    certsLabel: { en: "Vendor certifications", es: "Certificaciones" } as L,
   },
 };
 
@@ -84,7 +92,7 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "banking",
     sector: { en: "Banking", es: "Banca" },
-    duration: { en: "18 months", es: "18 meses" },
+    duration: { en: "7 months", es: "7 meses" },
     stack: ["Cisco WSA", "Cisco Umbrella", "Netskope", "Splunk", "SWG", "SSL Inspection"],
     context: {
       en: "Perimeter security operations for a large retail bank, covering the full proxy estate with no intermediate support tiers.",
@@ -120,7 +128,14 @@ export const caseStudies: CaseStudy[] = [
       es: "Infraestructura aeroportuaria y transporte",
     },
     duration: { en: "Multi-phase rollout", es: "Despliegue multifase" },
-    stack: ["Zscaler ZIA", "Zscaler ZPA", "Endpoint DLP", "Inline DLP", "CASB API", "Proxy migration"],
+    stack: [
+      "Zscaler ZIA",
+      "Zscaler ZPA",
+      "Endpoint DLP",
+      "Inline DLP",
+      "CASB API",
+      "Proxy migration",
+    ],
     context: {
       en: "End-to-end Zscaler SSE deployment for an airport infrastructure operator, replacing a legacy proxy platform.",
       es: "Implantación integral de Zscaler SSE para un operador de infraestructuras aeroportuarias, sustituyendo una plataforma de proxy heredada.",
@@ -275,14 +290,54 @@ export const engagements: Engagement[] = [
     stack: ["Netskope SSE", "DLP", "Web policy"],
   },
   {
-    sector: { en: "Energy — email security", es: "Energía — seguridad de correo" },
-    duration: { en: "3 months", es: "3 meses" },
-    stack: ["Proofpoint", "Microsoft 365", "Hybrid Exchange"],
-  },
-  {
     sector: { en: "Enterprise IT support & systems", es: "Soporte IT y sistemas corporativos" },
     duration: { en: "14 months", es: "14 meses" },
     stack: ["Windows Server", "Endpoint", "Networking"],
+  },
+];
+
+export const engagementCount = caseStudies.length + engagements.length;
+export const sectorCount = new Set(
+  [...caseStudies, ...engagements].map((p) => p.sector.en.split(" — ")[0]),
+).size;
+
+export type Automation = { title: L; description: L };
+
+export const automations: Automation[] = [
+  {
+    title: { en: "Policy automation suite", es: "Suite de automatización de políticas" },
+    description: {
+      en: "Bulk import, export and real-time management of web filtering, private access and endpoint policies across multiple tenants — replacing hours of manual console work with batch operations.",
+      es: "Importación, exportación y gestión en tiempo real de políticas de filtrado web, acceso privado y endpoint en varios tenants — sustituyendo horas de trabajo manual en consola por operaciones por lote.",
+    },
+  },
+  {
+    title: { en: "Diagnostics & log analysis", es: "Diagnóstico y análisis de logs" },
+    description: {
+      en: "Parses and visualises client diagnostic bundles into an interactive dashboard, turning raw logs into fast triage for connectivity, authentication and certificate issues.",
+      es: "Analiza y visualiza paquetes de diagnóstico de cliente en un panel interactivo, convirtiendo logs en bruto en un triaje rápido de incidencias de conectividad, autenticación y certificados.",
+    },
+  },
+  {
+    title: { en: "Guided connectivity diagnostics", es: "Diagnóstico de conectividad guiado" },
+    description: {
+      en: "An interactive terminal tool that walks through DNS, connectivity and packet-capture checks for private-access connectors, producing a single report ready to share with support.",
+      es: "Herramienta de terminal interactiva que guía comprobaciones de DNS, conectividad y captura de paquetes para conectores de acceso privado, generando un único informe listo para compartir con soporte.",
+    },
+  },
+  {
+    title: { en: "Deployment tracking & audit", es: "Seguimiento y auditoría de despliegues" },
+    description: {
+      en: "Cross-references rollout target lists against live tenant data to classify adoption in real time and flag outdated agent versions across a client base.",
+      es: "Cruza listados objetivo de despliegue con datos en vivo del tenant para clasificar la adopción en tiempo real y detectar versiones de agente desactualizadas.",
+    },
+  },
+  {
+    title: { en: "Extensible automation platform", es: "Plataforma de automatización extensible" },
+    description: {
+      en: "A plugin-based platform for running bulk configuration changes on demand, designed so new automations can be added without touching the core system.",
+      es: "Plataforma basada en plugins para ejecutar cambios de configuración masivos bajo demanda, diseñada para añadir nuevas automatizaciones sin tocar el núcleo del sistema.",
+    },
   },
 ];
 
@@ -293,17 +348,59 @@ export type Interest = {
 };
 
 export const interests: Interest[] = [
-  { label: { en: "SSE/SASE architecture", es: "Arquitectura SSE/SASE" }, category: "technical", icon: "Network" },
-  { label: { en: "Zero Trust design", es: "Diseño Zero Trust" }, category: "technical", icon: "ShieldCheck" },
-  { label: { en: "Cloud security (AWS/Azure/GCP)", es: "Seguridad en cloud (AWS/Azure/GCP)" }, category: "technical", icon: "Cloud" },
-  { label: { en: "DLP & data protection", es: "DLP y protección de datos" }, category: "technical", icon: "FileLock2" },
-  { label: { en: "Identity & access management", es: "Gestión de identidades y accesos" }, category: "technical", icon: "KeyRound" },
-  { label: { en: "Security automation", es: "Automatización de seguridad" }, category: "technical", icon: "Workflow" },
-  { label: { en: "Threat modeling", es: "Modelado de amenazas" }, category: "technical", icon: "Crosshair" },
-  { label: { en: "Network security", es: "Seguridad de redes" }, category: "technical", icon: "Waypoints" },
-  { label: { en: "Homelab & self-hosting", es: "Homelab y self-hosting" }, category: "personal", icon: "Server" },
-  { label: { en: "Open-source security tools", es: "Herramientas open source de seguridad" }, category: "personal", icon: "GitBranch" },
-  { label: { en: "Continuous learning", es: "Aprendizaje continuo" }, category: "personal", icon: "BookOpen" },
+  {
+    label: { en: "SSE/SASE architecture", es: "Arquitectura SSE/SASE" },
+    category: "technical",
+    icon: "Network",
+  },
+  {
+    label: { en: "Zero Trust design", es: "Diseño Zero Trust" },
+    category: "technical",
+    icon: "ShieldCheck",
+  },
+  {
+    label: { en: "Cloud security (AWS/Azure/GCP)", es: "Seguridad en cloud (AWS/Azure/GCP)" },
+    category: "technical",
+    icon: "Cloud",
+  },
+  {
+    label: { en: "DLP & data protection", es: "DLP y protección de datos" },
+    category: "technical",
+    icon: "FileLock2",
+  },
+  {
+    label: { en: "Identity & access management", es: "Gestión de identidades y accesos" },
+    category: "technical",
+    icon: "KeyRound",
+  },
+  {
+    label: { en: "Security automation", es: "Automatización de seguridad" },
+    category: "technical",
+    icon: "Workflow",
+  },
+  {
+    label: { en: "Threat modeling", es: "Modelado de amenazas" },
+    category: "technical",
+    icon: "Crosshair",
+  },
+  {
+    label: { en: "Network security", es: "Seguridad de redes" },
+    category: "technical",
+    icon: "Waypoints",
+  },
+  {
+    label: { en: "Homelab & self-hosting", es: "Homelab y self-hosting" },
+    category: "personal",
+    icon: "Server",
+  },
+  {
+    label: { en: "Open-source security tools", es: "Herramientas open source de seguridad" },
+    category: "personal",
+    icon: "GitBranch",
+  },
+  {
+    label: { en: "Continuous learning", es: "Aprendizaje continuo" },
+    category: "personal",
+    icon: "BookOpen",
+  },
 ];
-
-

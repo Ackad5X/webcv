@@ -6,8 +6,8 @@ export function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section id="top" className="border-b border-border">
-      <div className="mx-auto flex max-w-4xl flex-col items-center px-6 pb-12 pt-20 text-center md:pb-14 md:pt-28">
+    <section id="top" className="scroll-mt-16 border-b border-border">
+      <div className="mx-auto flex max-w-4xl flex-col items-center px-6 pb-12 pt-20 text-center md:pb-14 md:pt-16">
         <p className="font-mono text-xs uppercase tracking-[0.24em] text-primary">
           Security Architecture · SSE / SASE / Zero Trust
         </p>
@@ -22,7 +22,7 @@ export function Hero() {
           {t(profile.meta)}
         </p>
 
-        <div className="mt-10 flex w-full flex-wrap items-center justify-center gap-x-10 gap-y-5 border-t border-border pt-8">
+        <div className="mt-10 flex w-full flex-wrap items-center justify-center gap-x-10 gap-y-5">
           {vendors.map((vendor) => (
             <VendorLogo key={vendor.domain} name={vendor.name} domain={vendor.domain} />
           ))}

@@ -2,11 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { LanguageProvider } from "@/lib/language";
 import { SiteNav } from "@/components/SiteNav";
 import { Hero } from "@/components/Hero";
-import { FeaturedProjects } from "@/components/FeaturedProjects";
-import { AllProjects } from "@/components/AllProjects";
+import { ProjectExperience } from "@/components/ProjectExperience";
 import { Certifications } from "@/components/Certifications";
+import { Automation } from "@/components/Automation";
 import { Interests } from "@/components/Interests";
 import { SiteFooter } from "@/components/SiteFooter";
+import { GridBackground } from "@/components/GridBackground";
 
 const title = "Alejandro Castaño — Security Architect | SSE, SASE & Zero Trust";
 const description =
@@ -29,13 +30,14 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-background">
+      <div className="relative min-h-screen bg-background">
+        <GridBackground />
         <SiteNav />
-        <main>
+        <main className="relative z-10">
           <Hero />
-          <FeaturedProjects />
-          <AllProjects />
+          <ProjectExperience />
           <Certifications />
+          <Automation />
           <Interests />
         </main>
         <SiteFooter />

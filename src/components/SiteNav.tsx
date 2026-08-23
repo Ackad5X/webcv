@@ -3,8 +3,8 @@ import { profile, ui } from "@/content/site";
 
 const links = [
   { href: "#project-experience", label: ui.nav.work },
-  { href: "#projects", label: ui.nav.all },
   { href: "#certifications", label: ui.nav.certs },
+  { href: "#automation", label: ui.nav.automation },
   { href: "#interests", label: ui.nav.interests },
   { href: "#contact", label: ui.nav.contact },
 ];

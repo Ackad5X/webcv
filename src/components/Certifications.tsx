@@ -16,8 +16,8 @@ export function Certifications() {
   const { t, lang } = useLanguage();
 
   return (
-    <section id="certifications" className="border-b border-border bg-card/30">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+    <section id="certifications" className="scroll-mt-16 border-b border-border bg-card/30">
+      <div className="mx-auto max-w-6xl px-6 section-padding">
         <SectionHeading index="03" title={t(ui.sections.certs)} note={t(ui.sections.certsNote)} />
 
         <div className="mt-10 space-y-12">

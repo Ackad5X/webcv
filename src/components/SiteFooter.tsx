@@ -5,7 +5,7 @@ export function SiteFooter() {
   const { t } = useLanguage();
 
   return (
-    <footer id="contact" className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+    <footer id="contact" className="mx-auto max-w-6xl px-6 py-20 md:py-24 scroll-mt-16">
       <div className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-primary">
@@ -41,7 +41,10 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <p className="mt-14 border-t border-border pt-6 font-mono text-[11px] text-muted-foreground">
+      <p
+        className="mt-14 border-t border-border pt-6 font-mono text-[11px] text-muted-foreground"
+        suppressHydrationWarning
+      >
         © {new Date().getFullYear()} {profile.name} · {t(profile.location)}
       </p>
     </footer>
