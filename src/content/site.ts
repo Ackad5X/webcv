@@ -11,12 +11,12 @@ export const profile = {
     es: "Arquitecto de Seguridad | Especialista en Zscaler y Netskope | SSE/SASE y Zero Trust para entornos multinube",
   } as L,
   summary: {
-    en: "I design and deploy SSE/SASE architectures and Zero Trust models on Zscaler and Netskope for regulated, multi-cloud enterprises.\nHands-on across secure web gateway, private access, DLP and CASB — aligned to NIST and MITRE ATT&CK.",
-    es: "Diseño e implemento arquitecturas SSE/SASE y modelos Zero Trust sobre Zscaler y Netskope para entornos multinube regulados.\nEnfoque hands-on en navegación segura, acceso privado, DLP y CASB, alineado a NIST y MITRE ATT&CK.",
+    en: "I design and deploy SSE/SASE architectures and Zero Trust models on Zscaler and Netskope for regulated, multi-cloud enterprises.\nHands-on across secure web gateway, private access, DLP and CASB — aligned to NIST and MITRE ATT&CK. Currently working as a multi-technology security architect.",
+    es: "Diseño e implemento arquitecturas SSE/SASE y modelos Zero Trust sobre Zscaler y Netskope para entornos multinube regulados.\nEnfoque hands-on en navegación segura, acceso privado, DLP y CASB, alineado a NIST y MITRE ATT&CK. Actualmente desempeñándome como arquitecto de seguridad multi-tecnología.",
   } as L,
   meta: {
-    en: "Based in Spain · 5+ years in network & cloud security · Professional working English",
-    es: "Basado en España · +5 años en seguridad de red y cloud · Inglés profesional",
+    en: "Spain · 5+ years in network & cloud security · Professional working English",
+    es: "España · +5 años en seguridad de red y cloud · Inglés profesional",
   } as L,
 };
 
@@ -39,13 +39,13 @@ export const ui = {
     featured: { en: "Project experience", es: "Experiencia en proyectos" } as L,
     certs: { en: "Certifications", es: "Certificaciones" } as L,
     certsNote: {
-      en: "19 vendor certifications across the SSE/SASE stack.",
-      es: "19 certificaciones de fabricante en el stack SSE/SASE.",
+      en: "15 vendor certifications across the SSE/SASE stack.",
+      es: "15 certificaciones de fabricante en el stack SSE/SASE.",
     } as L,
     automation: { en: "AI & Automation", es: "IA y Automatización" } as L,
     automationNote: {
-      en: "With the rise of AI, automation has become far more accessible — I've leaned into that, building internal tooling (often with AI-assisted development) around the areas below.",
-      es: "Con el auge de la IA, la automatización se ha vuelto mucho más accesible — he apostado por ello, construyendo herramientas internas (muchas veces con desarrollo asistido por IA) en las áreas de abajo.",
+      en: "With the rise of AI, automation has become far more accessible — I've leaned into that, building internal tooling around the areas below.",
+      es: "Con el auge de la IA, la automatización se ha vuelto mucho más accesible — he apostado por ello, construyendo herramientas internas en las áreas de abajo.",
     } as L,
     interests: { en: "Interests", es: "Intereses" } as L,
   },
@@ -255,11 +255,6 @@ export const engagements: Engagement[] = [
     stack: ["Zscaler", "Chronicle", "Trellix HX", "SentinelOne"],
   },
   {
-    sector: { en: "Banking — Netskope operations", es: "Banca — operación Netskope" },
-    duration: { en: "7 months", es: "7 meses" },
-    stack: ["Netskope SWG", "CASB", "DLP"],
-  },
-  {
     sector: { en: "Chemical industry", es: "Industria química" },
     duration: { en: "2 months", es: "2 meses" },
     stack: ["Netskope audit", "NPA", "Cloud Exchange", "IoC ingestion"],
@@ -289,11 +284,6 @@ export const engagements: Engagement[] = [
     duration: { en: "2 months", es: "2 meses" },
     stack: ["Netskope SSE", "DLP", "Web policy"],
   },
-  {
-    sector: { en: "Enterprise IT support & systems", es: "Soporte IT y sistemas corporativos" },
-    duration: { en: "14 months", es: "14 meses" },
-    stack: ["Windows Server", "Endpoint", "Networking"],
-  },
 ];
 
 export const engagementCount = caseStudies.length + engagements.length;
@@ -305,10 +295,13 @@ export type Automation = { title: L; description: L };
 
 export const automations: Automation[] = [
   {
-    title: { en: "Policy automation suite", es: "Suite de automatización de políticas" },
+    title: {
+      en: "Extensible policy automation suite",
+      es: "Suite de automatización y gestión de políticas",
+    },
     description: {
-      en: "Bulk import, export and real-time management of web filtering, private access and endpoint policies across multiple tenants — replacing hours of manual console work with batch operations.",
-      es: "Importación, exportación y gestión en tiempo real de políticas de filtrado web, acceso privado y endpoint en varios tenants — sustituyendo horas de trabajo manual en consola por operaciones por lote.",
+      en: "A plugin-based platform for bulk import, export, and real-time management of web filtering, private access, and endpoint policies across multiple vendor tenants — replacing hours of manual console work with batch operations.",
+      es: "Plataforma basada en plugins para importación, exportación y gestión masiva en tiempo real de políticas de filtrado web, acceso privado y endpoint en diversos fabricantes y tenants — sustituyendo horas de trabajo manual en consola por operaciones por lote.",
     },
   },
   {
@@ -330,13 +323,6 @@ export const automations: Automation[] = [
     description: {
       en: "Cross-references rollout target lists against live tenant data to classify adoption in real time and flag outdated agent versions across a client base.",
       es: "Cruza listados objetivo de despliegue con datos en vivo del tenant para clasificar la adopción en tiempo real y detectar versiones de agente desactualizadas.",
-    },
-  },
-  {
-    title: { en: "Extensible automation platform", es: "Plataforma de automatización extensible" },
-    description: {
-      en: "A plugin-based platform for running bulk configuration changes on demand, designed so new automations can be added without touching the core system.",
-      es: "Plataforma basada en plugins para ejecutar cambios de configuración masivos bajo demanda, diseñada para añadir nuevas automatizaciones sin tocar el núcleo del sistema.",
     },
   },
 ];

@@ -10,7 +10,7 @@ export function Automation() {
       <div className="mx-auto max-w-6xl px-6 section-padding">
         <SectionHeading index="04" title={t(ui.sections.automation)} />
 
-        <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
           {t(ui.sections.automationNote)}
         </p>
 

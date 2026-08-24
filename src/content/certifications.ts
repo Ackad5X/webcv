@@ -37,7 +37,7 @@ export const certifications: Certification[] = [
     expirationDate: null,
   },
   {
-    title: "Palo Alto Certified SSE (Prisma Access) Engineer",
+    title: "Palo Alto Certified SSE (Prisma Access) Engineer Course",
     issuer: "Palo Alto Networks",
     issueDate: "2026-08-04",
     expirationDate: null,
@@ -49,40 +49,16 @@ export const certifications: Certification[] = [
     expirationDate: "2026-04-09",
   },
   {
-    title: "Netskope Security Cloud Implementation and Integration",
-    issuer: "Netskope",
-    issueDate: "2023-11-03",
-    expirationDate: null,
-  },
-  {
     title: "Netskope Certified Cloud Security Administrator",
     issuer: "Netskope",
     issueDate: "2023-08-24",
     expirationDate: "2025-08-23",
   },
   {
-    title: "Netskope Security Cloud Operation and Administration",
-    issuer: "Netskope",
-    issueDate: "2022-08-04",
-    expirationDate: null,
-  },
-  {
     title: "Netskope Cloud Security Specialist",
     issuer: "Netskope",
     issueDate: "2022-06-22",
     expirationDate: "2024-06-21",
-  },
-  {
-    title: "Netskope Security Cloud Hands On LAB",
-    issuer: "Netskope",
-    issueDate: "2022-06-21",
-    expirationDate: null,
-  },
-  {
-    title: "Netskope Security Cloud Introductory Online Technical Training",
-    issuer: "Netskope",
-    issueDate: "2022-06-14",
-    expirationDate: null,
   },
   {
     title: "Data Security Delivery Specialist Certification",
