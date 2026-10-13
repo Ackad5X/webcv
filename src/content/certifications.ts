@@ -25,6 +25,12 @@ export const certifications: Certification[] = [
     expirationDate: "2027-05-27",
   },
   {
+    title: "Palo Alto Certified SSE Engineer",
+    issuer: "Palo Alto Networks",
+    issueDate: "2026-08-04",
+    expirationDate: null,
+  },
+  {
     title: "Palo Alto Software Firewall - Sales Product Specialist",
     issuer: "Palo Alto Networks",
     issueDate: "2026-07-20",
@@ -34,12 +40,6 @@ export const certifications: Certification[] = [
     title: "Palo Alto SASE - Sales Product Specialist",
     issuer: "Palo Alto Networks",
     issueDate: "2026-07-21",
-    expirationDate: null,
-  },
-  {
-    title: "Palo Alto Certified SSE (Prisma Access) Engineer Course",
-    issuer: "Palo Alto Networks",
-    issueDate: "2026-08-04",
     expirationDate: null,
   },
   {

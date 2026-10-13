@@ -7,8 +7,10 @@ import ddConsultant from "@/assets/zscaler-digital-delivery-consultant.png";
 import nsSpecialist from "@/assets/Netskope_Cloud_Security_Specialist_no_bg.png";
 import nsAdministrator from "@/assets/Netskope_Certified_Cloud_Security_Administrator_no_bg.png";
 import nsIntegrator from "@/assets/Netskope_Certified_Cloud_Security_Integrator_no_bg.png";
+import paSseEngineer from "@/assets/sse-egenieer-palo-alto.png";
 
 export const certBadges: Record<string, string> = {
+  "Palo Alto Certified SSE Engineer": paSseEngineer,
   "Data Security Delivery Specialist Certification": dataSecurity,
   "Zscaler Private Access (ZPA) Support Specialist Certification": zpaSupport,
   "Zscaler Internet Access (ZIA) Support Specialist Certification": ziaSupport,
